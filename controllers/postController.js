@@ -38,14 +38,14 @@ const createPostController=async(req,res)=>{
 //Get all Posts
 const getAllPostsController=async(req,res)=>{
     try{
-        const post=await postModel
+        const posts=await postModel
         .find()
         .populate("postedBy","_id name")
         .sort({createdAt:-1});
         res.status(200).send({
             success:true,
             message:"All Posts Data",
-            post,
+            posts,
         });
     }catch(error)
     {
@@ -61,11 +61,11 @@ const getAllPostsController=async(req,res)=>{
 //get user posts
 const getUserPostsController=async(req,res)=>{
     try{
-        const userPost=await postModel.find({postedBy:req.auth._id});
+        const userPosts=await postModel.find({postedBy:req.auth._id});
         res.status(200).send({
             success:true,
             message:"user posts",
-            userPost,
+            userPosts,
         })  
     }catch(error)
     {
