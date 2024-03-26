@@ -23,7 +23,7 @@ const createPostController=async(req,res)=>{
             message:'"Post Created Successfully',
             post,
         });
-        console.log(req);
+        //console.log(req);
     }catch(error)
     {
         console.log(error);
