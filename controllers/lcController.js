@@ -49,4 +49,4 @@ const getAllLikesController=async(req,res)=>{
     }
 };
 
-module.exports={createLikeController,getAllLikesController};
+module.exports={createLikeController,getAllLikesController}
