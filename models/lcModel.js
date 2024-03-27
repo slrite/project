@@ -18,4 +18,4 @@ const LCommentSchema=new mongoose.Schema({
 },{timestamps:true})
 
 
-module.exports=mongoose.model("LComment",LCommentSchema);
+module.exports=mongoose.model("LComment",LCommentSchema)
