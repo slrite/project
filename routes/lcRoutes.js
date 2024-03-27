@@ -12,6 +12,6 @@ const router = express.Router();
 router.post("/likeComment",requireSingIn,createLikeController);
 
 //get likes
-router.get("/lcomment",getAllLikesController);
+router.get("/lcomment",getAllLikesController)
 
 module.exports=router;
